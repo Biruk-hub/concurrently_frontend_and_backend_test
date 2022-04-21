@@ -1,0 +1,26 @@
+{
+  "name": "concurrently_frontend_and_backend_test",
+  "version": "1.0.0",
+  "description": "\"Concurrent testing\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server && npm run client",
+    "server": " cd server && npm run start:dev && cd ..",
+    "client": " cd client && npm start && cd ..",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "proxy": {
+    "**": "http://localhost:5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biruk-hub/concurrently_frontend_and_backend_test.git"
+  },
+  "author": "BirukEndris/AhaduSolution",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biruk-hub/concurrently_frontend_and_backend_test/issues"
+  },
+  "homepage": "https://github.com/Biruk-hub/concurrently_frontend_and_backend_test#readme"
+}
